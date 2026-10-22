@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <title>Radinhos</title>
+  <link rel="stylesheet" href="css/game.css">
+</head>
+<body>
+  <div id="stage">
+    <canvas id="view" width="960" height="540"></canvas>
+    <div id="hud" hidden>
+      <div id="hud-copy">
+        <div id="level-name"></div>
+        <div id="hint"></div>
+        <div id="health" aria-hidden="true">
+          <span id="health-fill"></span>
+        </div>
+        <div id="meter" aria-hidden="true">
+          <span id="meter-fill"></span>
+        </div>
+      </div>
+      <div id="hud-side">
+        <div id="timer" hidden></div>
+        <span id="meter-text"></span>
+        <button type="button" id="btn-pause">Pausa</button>
+        <button type="button" id="btn-mute-hud" aria-pressed="false">Som</button>
+      </div>
+    </div>
+    <section id="card" hidden>
+      <div class="panel">
+        <h1 id="card-title">Radinhos</h1>
+        <p id="card-body"></p>
+        <div id="card-actions">
+          <button type="button" id="act-play">Jogar</button>
+          <button type="button" id="act-continue" hidden>Continuar</button>
+          <button type="button" id="act-resume" hidden>Voltar</button>
+          <button type="button" id="act-retry" hidden>Repetir</button>
+          <button type="button" id="act-next" hidden>Próxima fase</button>
+          <button type="button" id="act-replay" hidden>Jogar de novo</button>
+          <button type="button" id="act-menu" hidden>Menu</button>
+          <button type="button" id="act-mute" aria-pressed="false">Som ligado</button>
+        </div>
+      </div>
+    </section>
+    <div id="stick" hidden aria-label="Mover">
+      <div id="nub"></div>
+    </div>
+  </div>
+  <script src="js/config.js"></script>
+  <script src="js/storage.js"></script>
+  <script src="js/levels.js"></script>
+  <script src="js/platform.js"></script>
+  <script src="js/audio.js"></script>
+  <script src="js/sim.js"></script>
+  <script src="js/render.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
